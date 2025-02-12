@@ -1,4 +1,4 @@
-// This is a C Program by Achutha Aswin Naick (S4 ECE Roll 03) to Implement Booth's Multiplier algorithm without using any *,/ operators.
+// This is a C Program by Achutha Aswin Naick to Implement Booth's Multiplier algorithm without using any *,/ operators.
 
 // let us have a clarity on the variables we are going to use:
 // M: multiplicand
