@@ -12,7 +12,7 @@
 
 
 //Defining a Function to determine the minimum number of bits required to perform the operations
-(No. of bits= No. of operation cycles)
+//(No. of bits= No. of operation cycles)
 
 int getBitLength(int M, int Q) {
     int maxValue= (abs(M)>abs(Q)) ? abs(M):abs(Q); //Taking max value of M and Q. 
