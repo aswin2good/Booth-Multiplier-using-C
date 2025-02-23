@@ -11,10 +11,12 @@
 #include <stdlib.h> // used to calculate absolute values
 
 
-//Defining a Function to determine the minimum number of bits required to perform the operations(No. of bits= No. of operation cycles)
+//Defining a Function to determine the minimum number of bits required to perform the operations
+(No. of bits= No. of operation cycles)
 
 int getBitLength(int M, int Q) {
-    int maxValue= (abs(M)>abs(Q)) ? abs(M):abs(Q); //Taking max value of M and Q. If M>Q we take M else we will take Q
+    int maxValue= (abs(M)>abs(Q)) ? abs(M):abs(Q); //Taking max value of M and Q. 
+                                                   //If M>Q we take M else we will take Q
     int n=0; //initiliazed n to 0
     while (maxValue>0){
         maxValue= maxValue >> 1; //bitwise right shift by 1 bit(divide by 10)
@@ -50,13 +52,15 @@ int boothMultiplier(int M,int Q,int n) {
     
     Q= (Q >> 1) | ((A & 1 ) << (n-1)); // Right shift Q by 1 and extracts A's LSB and puts it to Q's MSB.
     
-    A = (A >> 1) | (A & (1 << (n - 1))); // Right shift A by 1, and extracts sign bit (MSB of A) and puts it back after shifting keeping the same sign bit.
+    A = (A >> 1) | (A & (1 << (n - 1))); // Right shift A by 1, and extracts sign bit (MSB of A) and
+                                         // puts it back after shifting keeping the same sign bit.
     
     count=count-1;
     }
     
     // The result is in A (higher part) and Q (lower part)
-    return (A << n) | Q ; // after shifting A, n times to the left in order to make it higher bits of final answer. | is used to combine the bits of A and Q. Q holds the lower part of the final answer.
+    return (A << n) | Q ; // after shifting A, n times to the left in order to make it higher bits of final answer. 
+                          //| is used to combine the bits of A and Q. Q holds the lower part of the final answer.
 }
 
 int main() {
